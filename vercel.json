@@ -1,32 +1,25 @@
 {
     "version": 2,
     "builds": [
-        {
+      {
         "src": "backportfolio/wsgi.py",
-        "use": "@vercel/python",
-        "config": {
-            "maxLambdaSize": "50mb"
-        }
-        },
-        {
+        "use": "@vercel/python"
+      },
+      {
         "src": "manage.py",
-        "use": "@vercel/python",
-        "config": {
-            "maxLambdaSize": "50mb"
-        }
-        }
+        "use": "@vercel/python"
+      }
     ],
     "routes": [
-        {
+      {
         "src": "/static/(.*)",
         "dest": "/static/$1"
-        },
-        {
+      },
+      {
         "src": "/(.*)",
         "dest": "backportfolio/wsgi.py"
-        }
+      }
     ],
     "buildCommand": "pip install -r requirements.txt && python manage.py collectstatic --noinput"
-}
-
+  }
   
