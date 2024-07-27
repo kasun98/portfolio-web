@@ -3,14 +3,13 @@
     "builds": [
       {
         "src": "backportfolio/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.12" }
+        "use": "@vercel/python"
       },
       {
-        "src": "build_files.sh",
-        "use": "@vercel/static-build",
+        "src": "manage.py",
+        "use": "@vercel/python",
         "config": {
-          "distDir": "staticfiles_build"
+          "distDir": "staticfiles"
         }
       }
     ],
@@ -24,5 +23,6 @@
         "dest": "backportfolio/wsgi.py"
       }
     ],
-    "buildCommand": "pip install -r requirements.txt && python manage.py collectstatic --yes"
+    "buildCommand": "pip install -r requirements.txt && python manage.py collectstatic --noinput"
   }
+  
