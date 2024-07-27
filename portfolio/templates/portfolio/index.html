@@ -1,0 +1,736 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="icon" href="https://res.cloudinary.com/dlb65j6di/image/upload/v1722077419/presentation-svgrepo-com_vphgux.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
+    <script src="{% static 'portfolio/scripts.js' %}"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'portfolio/logo.png' %}" alt="Your Logo" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero-section text-center text-white">
+        
+        <div class="container">
+            <h1 class="word">Bringing your vision to life through innovative solutions and intuitive design.</h1>
+            <p id="intro">Transforming data into actionable insights with expertise in Data Science, Machine Learning, and Web Development.</p>
+            <br>
+            <div class="hero-buttons">
+                <a href="#projects" id="btn3" class="btn btn-primary">Get In Touch</a>
+                <a href="#contact" id="btn2" class="btn btn-secondary">Contact Me</a>
+            </div>
+        </div>
+        <div class="scroll">
+            <a href="#about" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+    
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-fluid" src="{% static 'portfolio/propic.png' %}">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Hi there!</h2>
+                    <p>I'm Kasun Dewaka, a passionate AI, Data Science, Machine Learning, and Full Stack Web Development enthusiast. I thrive on turning data into actionable insights, building models that solve real-world problems, and creating dynamic web applications. Explore my projects and experience below to see how I bring data to life and build impactful web solutions.</p>
+                    <div class="social-icons mt-3">
+                        
+                        <a href="https://github.com/kasun98" target="_blank" target="_blank" style="padding-right: 10px; text-decoration: none;" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.467-2.382 1.235-3.22-.135-.305-.54-1.527.105-3.18 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.875.12 3.18.765.838 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.293 0 .322.21.698.825.58C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/kasundewaka" target="_blank" style="padding-right: 10px; text-decoration: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.21 0 22.23 0zM7.06 20.47H3.56V8.98h3.5v11.49zM5.31 7.62a2.03 2.03 0 1 1 0-4.05 2.03 2.03 0 0 1 0 4.05zm14.41 12.85h-3.49v-5.59c0-1.33-.03-3.05-1.86-3.05-1.86 0-2.15 1.45-2.15 2.96v5.68H8.74V8.98h3.35v1.57h.05c.47-.89 1.61-1.82 3.32-1.82 3.55 0 4.2 2.34 4.2 5.38v6.36z"/>
+                            </svg>
+                        </a>
+
+                        <a href="https://www.facebook.com/kasun.dewaka.ii" target="_blank" style="padding-right: 10px; text-decoration: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.675 0h-21.35C.596 0 0 .595 0 1.326v21.348C0 23.404.596 24 1.326 24H12.82v-9.293H9.692v-3.622h3.128V8.413c0-3.1 1.891-4.788 4.656-4.788 1.325 0 2.463.099 2.794.143v3.24l-1.918.001c-1.503 0-1.794.715-1.794 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.112C23.404 24 24 23.404 24 22.674V1.326C24 .596 23.404 0 22.675 0z"/>
+                            </svg>
+                        </a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section">
+        <div class="container">
+          <!--first section-->
+          <div class="row align-items-center how-it-works d-flex">
+            <div class="col-2 text-center bottom d-inline-flex justify-content-center align-items-center">
+              <div class="circle font-weight-bold"><i class="uil uil-angle-right-b"></i></div>
+            </div>
+            <div class="col-6">
+              <h5>Graduated</h5>
+              <p>BSc (Hons) Engineering. Faculty of Engineering, University of Peradeniya. Second class (lower division) with 3.05/4.00 GPA (11/2017 – 03/2023)</p>
+            </div>
+          </div>
+          <!--path between 1-2-->
+          <div class="row timeline">
+            <div class="col-2">
+              <div class="corner top-right"></div>
+            </div>
+            <div class="col-8">
+              <hr/>
+            </div>
+            <div class="col-2">
+              <div class="corner left-bottom"></div>
+            </div>
+          </div>
+          <!--second section-->
+          <div class="row align-items-center justify-content-end how-it-works d-flex">
+            <div class="col-6 text-right">
+              <h5>Engineering Trainee</h5>
+              <p>Kandy North Pathadumbara Integrated Water Supply Project (NWSDB) (08/2022 – 10/2022)</p>
+            </div>
+            <div class="col-2 text-center full d-inline-flex justify-content-center align-items-center">
+              <div class="circle font-weight-bold"><i class="uil uil-angle-left-b"></i></div>
+            </div>
+          </div>
+          <!--path between 2-3-->
+          <div class="row timeline">
+            <div class="col-2">
+              <div class="corner right-bottom"></div>
+            </div>
+            <div class="col-8">
+              <hr/>
+            </div>
+            <div class="col-2">
+              <div class="corner top-left"></div>
+            </div>
+          </div>
+          <!--third section-->
+          <div class="row align-items-center how-it-works d-flex">
+            <div class="col-2 text-center top d-inline-flex justify-content-center align-items-center">
+              <div class="circle font-weight-bold"><i class="uil uil-angle-right-b"></i></div>
+            </div>
+            <div class="col-6">
+              <h5>Engineering Trainee</h5>
+              <p>Road Development Authority CE Office Kandy (11/2019 – 02/2020)</p>
+            </div>
+          </div>
+          <!--path between 3-4-->
+          <div class="row timeline">
+            <div class="col-2">
+              <div class="corner top-right"></div>
+            </div>
+            <div class="col-8">
+              <hr/>
+            </div>
+            <div class="col-2">
+              <div class="corner left-bottom"></div>
+            </div>
+          </div>
+          <!--fourth section-->
+          <div class="row align-items-center justify-content-end how-it-works d-flex">
+            <div class="col-6 text-right">
+              <h5>G.C.E. Advanced Level Examination 2016</h5>
+              <p>Combined Mathematics - A, Physics - A, Chemistry - B, Ranabima Royal College, Kandy</p>
+            </div>
+            <div class="col-2 text-center full d-inline-flex justify-content-center align-items-center">
+              <div class="circle font-weight-bold"><i class="uil uil-angle-left-b"></i></div>
+            </div>
+          </div>
+          <!--path between 4-5-->
+          <div class="row timeline">
+            <div class="col-2">
+              <div class="corner right-bottom"></div>
+            </div>
+            <div class="col-8">
+              <hr/>
+            </div>
+            <div class="col-2">
+              <div class="corner top-left"></div>
+            </div>
+          </div>
+          <!--fifth section-->
+          <div class="row align-items-center how-it-works d-flex">
+            <div class="col-2 text-center top d-inline-flex justify-content-center align-items-center">
+              <div class="circle font-weight-bold"><i class="uil uil-angle-right-b"></i></div>
+            </div>
+            <div class="col-6">
+              <h5>G.C.E. Ordinary Level Examination 2013</h5>
+              <p>9 A passes.  Ranabima Royal College, Kandy</p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <p class="subtitle">My technical & miscellaneous skills</p>
+        <div class="skills-section">
+            <div>
+                <div class="skill-category" onclick="toggleSkillDetails('ai-ml', this)">
+                    <div class="skill-header">
+                        <span class="icon"><i class="uil uil-brain"></i></span>
+                        <span class="skill-title">AI ML</span>
+                        <span class="years"></span>
+                        <span class="arrow"><i class="uil uil-angle-down"></i></span>
+                    </div>
+                    <div id="ai-ml" class="skill-details">
+                        <p>Data Analytics & Visualization</p>
+                        <p>Computer Vision</p>
+                        <p>Generative AI</p>
+                        <p>TensorFlow</p>
+                        <p>LLMOps</p>
+                        <p>MLOps</p>
+                        <p>Keras</p>
+                        
+                         
+                    </div>
+                </div>
+                <div class="skill-category" onclick="toggleSkillDetails('programming', this)">
+                    <div class="skill-header">
+                        <span class="icon"><i class="uil uil-brackets-curly"></i></span>
+                        <span class="skill-title">Programming</span>
+                        <span class="years"></span>
+                        <span class="arrow"><i class="uil uil-angle-down"></i></span>
+                    </div>
+                    <div id="programming" class="skill-details">
+                        <p>Python</p>
+                        <p>SQL</p>
+                        <p>C</p>
+                        
+                    </div>
+                </div>
+                <div class="skill-category" onclick="toggleSkillDetails('cloud', this)">
+                    <div class="skill-header">
+                        <span class="icon"><i class="uil uil-cloud-computing"></i></span>
+                        <span class="skill-title">Cloud</span>
+                        <span class="years"></span>
+                        <span class="arrow"><i class="uil uil-angle-down"></i></span>
+                    </div>
+                    <div id="cloud" class="skill-details">
+                        <p>Google Cloud Platform</p>
+                        <p>Amazon Web Services</p>
+                        <p>Microsoft Azure</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="skill-category" onclick="toggleSkillDetails('front', this)">
+                    <div class="skill-header">
+                        <span class="icon"><i class="uil uil-window"></i></span>
+                        <span class="skill-title">Front-End </span>
+                        <span class="years"></span>
+                        <span class="arrow"><i class="uil uil-angle-down"></i></span>
+                    </div>
+                    <div id="front" class="skill-details">
+                        <p>Javascript</p>
+                        <p>Bootstrap</p>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                    </div>
+                </div>
+                <div class="skill-category" onclick="toggleSkillDetails('back', this)">
+                    <div class="skill-header">
+                        <span class="icon"><i class="uil uil-server-network"></i></span>
+                        <span class="skill-title">Back-End </span>
+                        <span class="years"></span>
+                        <span class="arrow"><i class="uil uil-angle-down"></i></span>
+                    </div>
+                    <div id="back" class="skill-details">
+                        <p>Django</p>
+                        <p>Flask</p>
+                    </div>
+                </div>
+                <div class="skill-category" onclick="toggleSkillDetails('other', this)">
+                    <div class="skill-header">
+                        <span class="icon"><i class="uil uil-bullseye"></i></span>
+                        <span class="skill-title">Other </span>
+                        <span class="years"></span>
+                        <span class="arrow "><i class="uil uil-angle-down"></i></span>
+                    </div>
+                    <div id="other" class="skill-details">
+                        <p>Problem solving</p>
+                        <p>Creativity</p>
+                        <p>Teamwork</p>
+                        <p>Git</p> 
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <section class="trusted-brands text-center">
+        <div id="projects" class="container">
+            <h1 id="project-title">Projects</h2>
+            <p class="subtitle">My projects portfolio</p>
+            <div class="row mx-auto" style="width: 90%;">
+                <a href="{% url 'categories' 'DeepLearning' %}" style="text-decoration: none;" class="col-md-3">
+                    <div >
+                        <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721744782/binary-circuit-cpu-svgrepo-com_vdar4e.svg" alt="Brand 2">
+                        Deep Learning
+                    </div>
+                </a>
+                <a href="{% url 'categories' 'GenerativeAI' %}" style="text-decoration: none;" class="col-md-3">
+                    <div >
+                        <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721744783/analytical-brain-creative-svgrepo-com_vlddjd.svg" alt="Brand 4">
+                        Gen AI
+                    </div>
+                </a>
+                <a href="{% url 'categories' 'WebDevelopment' %}" style="text-decoration: none;" class="col-md-3">
+                    <div >
+                        <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721744782/alert-caution-error-svgrepo-com_dmskaz.svg" alt="Brand 3">
+                        Web Dev
+                    </div>
+                </a>
+                <a href="{% url 'categories' 'DataScience' %}" style="text-decoration: none;" class="col-md-3">
+                    <div >
+                        <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721744783/exploration-zoom-magnify-svgrepo-com_a2hydg.svg" alt="Brand 1">
+                        Data Science
+                    </div>
+                </a>
+ 
+            </div>
+            <div class="row">
+                <div id="slider" class="col-md mx-auto">
+            
+                <div id="carouselExampleIndicators" class="carousel slide image-carousel" data-ride="carousel" data-interval="10000">
+                    <!-- <div class="background"></div> -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="13"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="14"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="15"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="16"></li>
+                        
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="intro2-2" class="col-md-6">
+                                        <h2>Groupz</h2>
+                                        <p>Chat web app where users can register, log in, chat with friends, create and manage groups, and interact with AI models in group chats.</p>
+                                        <div class="hero-buttons">
+                                            <a href="{% url 'projects' 1 %}" id="btn1" class="btn btn-primary">View <i class="uil uil-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924074/a_13_lot0td.png" alt="Groupz">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="intro2-2" class="col-md-6">
+                                        <h2>Traffic Management</h2>
+                                        <p>Vehicle traffic flow management system using YOLOv8n for object detection and tracking, also provides a GUI to display the vehicle counts, vehicle flow, and average speeds.</p>
+                                        <div class="hero-buttons">
+                                            <a href="{% url 'projects' 2 %}" id="btn1" class="btn btn-primary">View <i class="uil uil-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924053/a_15_ygjmwj.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="intro2-2" class="col-md-6">
+                                        <h2>Neuronbit</h2>
+                                        <p>Predictive model deviating from traditional methods to forecast Bitcoin Market direction, achieving a F1 score of 97% on test data. CrewAI (Updated)</p>
+                                        <div class="hero-buttons">
+                                            <a href="{% url 'projects' 3 %}" id="btn1" class="btn btn-primary">View <i class="uil uil-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924137/a_7_sybb8z.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="intro2-2" class="col-md-6">
+                                        <h2>GenAI Rag App</h2>
+                                        <p>An Advanced Approach to Research and Data Interaction using different Large Language Models and inference engines</p>
+                                        <div class="hero-buttons">
+                                            <a href="{% url 'projects' 4 %}" id="btn1" class="btn btn-primary">View <i class="uil uil-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924194/a_8_qr6u3t.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="intro2-2" class="col-md-6">
+                                        <h2>Emotion Analysis</h2>
+                                        <p>Real-time Emotion Analysis using YoloV8 model and Ultralytics Analytics</p>
+                                        <div class="hero-buttons">
+                                            <a href="{% url 'projects' 5 %}" id="btn1" class="btn btn-primary">View <i class="uil uil-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924193/a_4_yvlqca.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="intro2-2" class="col-md-6">
+                                        <h2>Deriv Synthetics</h2>
+                                        <p>Analyzing Deriv Broker's Synthetic Trading Indices Using Machine Learning Models</p>
+                                        <div class="hero-buttons">
+                                            <a href="{% url 'projects' 6 %}" id="btn1" class="btn btn-primary">View <i class="uil uil-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924134/a_6_kh6yjl.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="intro2-2" class="col-md-6">
+                                        <h2>Summarize Tube</h2>
+                                        <p>Revolutionizing Video Transcript Summarization using Google Gemini Pro.</p>
+                                        <div class="hero-buttons">
+                                            <a href="{% url 'projects' 7 %}" id="btn1" class="btn btn-primary">View <i class="uil uil-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924046/a_11_era6jt.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="intro2-2" class="col-md-6">
+                                        <h2>Face Detection</h2>
+                                        <p>Face Detection with TensorFlow Transfer Learning and OpenCV</p>
+                                        <div class="hero-buttons">
+                                            <a href="{% url 'projects' 8 %}" id="btn1" class="btn btn-primary">View <i class="uil uil-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924072/a_3_jsr2jn.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="intro2-2" class="col-md-6">
+                                        <h2>Tokyo Olympic</h2>
+                                        <p>Comprehensive analysis of the Tokyo Olympic dataset using Azure services and Tableau Public.</p>
+                                        <div class="hero-buttons">
+                                            <a href="{% url 'projects' 9 %}" id="btn1" class="btn btn-primary">View <i class="uil uil-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924096/a_5_shoh74.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="intro2-2" class="col-md-6">
+                                        <h2>Falcon9 Landing</h2>
+                                        <p>IBM Data Science capstone - predictive model for the successful landing of SpaceX Falcon 9's first stage.</p>
+                                        <div class="hero-buttons">
+                                            <a href="{% url 'projects' 10 %}" id="btn1" class="btn btn-primary">View <i class="uil uil-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924134/a_6_kh6yjl.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="intro2-2" class="col-md-6">
+                                        <h2>Auction Website </h2>
+                                        <p>This E-commerce auction website application allows users to create auction listings, place bids, add items to a watchlist, and leave comments on listings.</p>
+                                        <div class="hero-buttons">
+                                            <a href="{% url 'projects' 11 %}" id="btn1" class="btn btn-primary">View <i class="uil uil-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924029/a_10_fzogrt.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="intro2-2" class="col-md-6">
+                                        <h2>Forex Wallet</h2>
+                                        <p>The Personal Wallet Management WebApp is a comprehensive tool designed for individuals to manage their personal wallets across multiple currencies. The app supports a diverse range of currencies including USD, EUR, GBP...</p>
+                                        <div class="hero-buttons">
+                                            <a href="{% url 'projects' 12 %}" id="btn1" class="btn btn-primary">View <i class="uil uil-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924184/a_2_xszh83.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="intro2-2" class="col-md-6">
+                                        <h2>E-mail</h2>
+                                        <p>This project is an email client developed as part of the CS50 Web Development course.</p>
+                                        <div class="hero-buttons">
+                                            <a href="{% url 'projects' 13 %}" id="btn1" class="btn btn-primary">View <i class="uil uil-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924026/a_12_z70o6i.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="intro2-2" class="col-md-6">
+                                        <h2>Social Media</h2>
+                                        <p>Developed as part of the CS50 Web Development course. This web application allows users to interact with each other.</p>
+                                        <div class="hero-buttons">
+                                            <a href="{% url 'projects' 14 %}" id="btn1" class="btn btn-primary">View <i class="uil uil-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924045/a_14_v9szdu.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="intro2-2" class="col-md-6">
+                                        <h2>Portfolio</h2>
+                                        <p>This portfolio website showcases my projects, skills, and experiences in AI, Data Science, Machine Learning, and Web Development. It provides an overview of my professional journey and achievements.</p>
+                                        <div class="hero-buttons">
+                                            <a id="btn1" class="btn btn-primary">Welcome!</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924048/a_1_ohicjy.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="intro2-2" class="col-md-6">
+                                        <h2>Encyclopedia</h2>
+                                        <p>This project is a Wiki Encyclopedia developed as part of CS50 web development course.</p>
+                                        <div class="hero-buttons">
+                                            <a href="{% url 'projects' 15 %}" id="btn1" class="btn btn-primary">View <i class="uil uil-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924131/a_16_vtzce1.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="intro2-2" class="col-md-6">
+                                        <h2>Google Clone</h2>
+                                        <p>This project is a clone of Google's search functionalities, developed as part of the CS50 Web Development course.</p>
+                                        <div class="hero-buttons">
+                                            <a href="{% url 'projects' 16 %}" id="btn1" class="btn btn-primary">View <i class="uil uil-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924144/a_9_br5n3a.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            
+        </div>
+    </section>
+
+    <section class="certificates">
+        <h1 id="project-title">Certifications</h2>
+        <p class="subtitle">Recognitions of My Expertise and Commitment</p>
+        <div class="intro-c">
+            <p style="text-align: justify; color: #555454;">
+                In my journey, I have acquired several certifications that validate my skills and dedication to continuous learning. These certifications include the <strong>Coursera & Stanford University</strong> Machine Learning Specialization Certificate, <strong>IBM</strong> Data Science Professional Certificate, <strong>Harvard CS50</strong> certificates, <strong>Microsoft Azure</strong> & Coursera Data Scientist Associate Certificate, and the Coursera & <strong>Deeplearning.AI</strong> Deep Learning Specialization. Each of these credentials, awarded by renowned organizations, reflects my proficiency and commitment to staying at the forefront of technology and industry standards.
+            </p>
+        </div>
+        <div class="certification-container">
+            <div class="certifications">
+                <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721970325/Picsart_24-07-26_01-22-25-635_goudkl.png" alt="Certification 1">
+                <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721970328/Picsart_24-07-26_01-26-15-014_e8dgn6.png" alt="Certification 2">
+                <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721970335/Picsart_24-07-26_01-02-38-497_qcvakc.png" alt="Certification 3">
+                <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721970326/Picsart_24-07-26_01-06-42-149_mankha.png" alt="Certification 3">
+                <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721970334/Picsart_24-07-26_01-07-58-325_fua8o3.png" alt="Certification 3">
+                <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721970339/Picsart_24-07-26_01-09-39-264_qipjnk.png" alt="Certification 3">
+                <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721970331/Picsart_24-07-26_01-00-30-397_i8mzjf.png" alt="Certification 3">
+                <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721970340/Picsart_24-07-26_01-16-56-238_msi4vn.png" alt="Certification 3">
+                <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721970325/Picsart_24-07-26_01-22-25-635_goudkl.png" alt="Certification 1">
+                <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721970328/Picsart_24-07-26_01-26-15-014_e8dgn6.png" alt="Certification 2">
+                <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721970335/Picsart_24-07-26_01-02-38-497_qcvakc.png" alt="Certification 3">
+                <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721970326/Picsart_24-07-26_01-06-42-149_mankha.png" alt="Certification 3">
+                <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721970334/Picsart_24-07-26_01-07-58-325_fua8o3.png" alt="Certification 3">
+                <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721970339/Picsart_24-07-26_01-09-39-264_qipjnk.png" alt="Certification 3">
+                <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721970331/Picsart_24-07-26_01-00-30-397_i8mzjf.png" alt="Certification 3">
+                <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721970340/Picsart_24-07-26_01-16-56-238_msi4vn.png" alt="Certification 3">
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p class="subtitle">My contact details</p>
+
+        <div class="grid">
+            <div>
+                
+                <div class="contact-info">
+                    <i class="uil uil-envelope" ></i>
+                    <div>
+                        <h3 >Email</h3>
+                        <span >kdkasundewaka@gmail.com</span>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <i class="uil uil-phone"></i>
+                    <div>
+                        <h3 >Mobile</h3>
+                        <span >+94760073533</span>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <i class="uil uil-map-marker"></i>
+                    <div>
+                        <h3 >Location</h3>
+                        <span >Kandy, Sri Lanka</span>
+                    </div>
+                </div>
+            </div>
+
+            <div >
+                <div class="contact-info">
+                    <a href="https://www.linkedin.com/in/kasundewaka" target="_blank"><i class="uil uil-linkedin" ></i></a>
+                    <a href="https://github.com/kasun98" target="_blank"><i class="uil uil-github"></i></a>
+                    <a href="https://www.facebook.com/kasun.dewaka.ii" target="_blank"><i class="uil uil-facebook"></i></a>
+                    <div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <a href="#home" class="scrollup" id="scroll-top">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+
+    <footer class="footer text-center text-white bg-dark">
+        <div class="container">
+            <p>&copy; 2024 Kasun Dewaka. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

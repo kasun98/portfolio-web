@@ -1,0 +1,1380 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="icon" href="https://res.cloudinary.com/dlb65j6di/image/upload/v1722077419/presentation-svgrepo-com_vphgux.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
+    <script src="{% static 'portfolio/scripts.js' %}"></script>
+
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'portfolio/logo.png' %}" alt="Your Logo" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+   
+    {% if id == 1 %}
+    <section id="1" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'index' %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>                
+            </a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924074/a_13_lot0td.png">
+                </div>
+                
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Groupz!</h2>
+                    <p>A Django-based real-time chat web app where users can register, log in, chat with friends, create and manage groups, and interact with AI models in group chats.</p>
+                    <div class="social-icons mt-3">
+                        
+                        <a href="https://github.com/kasun98/chatapp" target="_blank" target="_blank" style="padding-right: 10px; text-decoration: none;" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.467-2.382 1.235-3.22-.135-.305-.54-1.527.105-3.18 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.875.12 3.18.765.838 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.293 0 .322.21.698.825.58C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg> Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Features</h2>
+                    <ul>
+                        <li><p>User Authentication: Users can register and log in.</p></li>
+                        <li><p>Private Chats: Users can chat with friends.</p></li>
+                        <li><p>Group Chats: Users can create groups, add/remove members, and delete groups (only for group admins).</p></li>
+                        <li><p>AI Interaction: In group chats, users can mention @gemini or @llama3 to ask questions from AI models.</p></li>
+                        <li><p>Real-time Communication: Utilizes WebSockets for real-time messaging.</p></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721998620/Picsart_24-07-26_18-24-19-758_lvnurf.png">
+                </div>
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6" style="align-content: center;">
+                    <iframe class="img-fluid" style="height: 300px; width: 600px;" src="https://www.youtube.com/embed/lYCe9OI8oro?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Technologies</h2>
+                    <ul>
+                        <li><p>Backend: Python, Django, Django ASGI, Django Channels, Daphne server</p></li>
+                        <li><p>Database: PostgreSQL</p></li>
+                        <li><p>Caching: Redis</p></li>
+                        <li><p>AI Models: Groq inference engine(Llama3 8B), Google Generative AI</p></li>
+                        <li><p>Frontend: HTML, JavaScript, CSS, Bootstrap</p></li>
+                        <li><p>Deployment: Render web services(free-tire)</p></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div class="scroll">
+            <a href="{% url 'projects' 2 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif id == 2 %}
+    <section id="2" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'projects' 1 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>               
+            </a>
+        </div>
+        <div class="container">
+            <div class="row" >
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924053/a_15_ygjmwj.png">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Real-time Traffic</h2>
+                    <p>Managing vehicle traffic flow efficiently is crucial for urban planning and safety. In this project, I developed a real-time traffic data management system using YOLOv8 for object detection and tracking. The system processes video feeds to detect vehicles, estimate their speeds, and count them as they pass through predefined lines. This project showcases a robust approach to real-time traffic monitoring and data analysis.</p>
+                    <div class="social-icons mt-3">
+                        
+                        <a href="https://github.com/kasun98/vehicles_trafficflow" target="_blank" target="_blank" style="padding-right: 10px; text-decoration: none;" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.467-2.382 1.235-3.22-.135-.305-.54-1.527.105-3.18 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.875.12 3.18.765.838 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.293 0 .322.21.698.825.58C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg> Github 
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>The Concept</h2>
+                    <p>The vehicle traffic flow management system leverages the power of YOLOv8 for real-time vehicle detection and tracking. The system not only identifies different classes of vehicles but also estimates their speeds and counts them as they move through designated areas in the video feed. This approach provides valuable insights into traffic patterns and vehicle behavior.</p>
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722001885/veh3_wto42d.png">
+                </div>
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722001921/veh1_nka470.png">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Model Development</h2>
+                    <p>The model was trained on a custom dataset to accurately detect and track vehicles and vehicle classes including Three-wheelers. Using a custom-trained YOLOv8 model, the system is optimized for recognizing various vehicle classes in different conditions. The integration of Ultralytics speed estimation algorithms and object counting techniques further enhances the functionality, making it a comprehensive solution for traffic data analysis.</p>
+                </div>   
+            </div>
+
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Technologies</h2>
+                    <ul>
+                        <li><p>YOLOv8n: For vehicle detection and tracking.</p></li>
+                        <li><p>OpenCV: For video processing and frame handling.</p></li>
+                        <li><p>Roboflow: Dataset annotation and augmentation</p></li>
+                        <li><p>PyTorch: For model training and inference.</p></li>
+                        <li><p>Plotly and Matplotlib: For data visualization and interactive charts.</p></li>
+                        <li><p>tkinter: For creating a graphical user interface (GUI).</p></li>
+                    </ul>
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    <video class="img-fluid" controls autoplay loop muted>
+                        <source src="https://res.cloudinary.com/djw3z53pj/video/upload/v1718479685/lv_0_20240615230024_nzn626.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+            </div>
+        </div>
+        <div class="scroll">
+            <a href="{% url 'projects' 3 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif id == 3 %}
+    <section id="3" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'projects' 2 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>                
+            </a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924137/a_7_sybb8z.png">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Neuronbit</h2>
+                    <p>Predicting future prices in the volatile world of cryptocurrency has always been a challenging endeavor. Traditional models frequently rely on LSTM and RNN algorithms, employing techniques such as Z-score normalization and Min-Max normalization. However, these methods often fall short as they fail to adapt to the market’s breaking of previous minimums or maximums. Instead of predicting exact prices, I have developed a different approach through my project, NeuronBit, which aims to forecast the daily market direction of Bitcoin.</p>
+                    <div class="social-icons mt-3">
+                        
+                        <a href="https://github.com/kasun98/NeuronBit_crewAI" target="_blank" target="_blank" style="padding-right: 10px; text-decoration: none;" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.467-2.382 1.235-3.22-.135-.305-.54-1.527.105-3.18 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.875.12 3.18.765.838 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.293 0 .322.21.698.825.58C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg> Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>The Concept</h2>
+                    <p>NeuronBit leverages a Deep neural network (DNN) with leaky ReLU activation and an intricate 14-layer architecture. Unlike conventional methods, NeuronBit predicts whether the next day's opening price will be higher or lower than today’s opening price. This directional prediction model provides traders with valuable insights into market trends, helping them make informed decisions.</p>
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722002769/fcnn_t6nccj.png">
+                </div>
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Model Development</h2>
+                    <p>Feature engineering is the cornerstone of building an effective prediction model. For NeuronBit, I meticulously selected 26 features that significantly influence Bitcoin prices. These features were chosen based on their potential impact on market movements and their relevance to the prediction task. Notably, I chose not to apply normalization techniques, allowing the model to operate on raw data and adapt to market shifts more naturally.</p>
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Performance</h2>
+                    <p>NeuronBit has demonstrated exceptional performance, achieving a 97% F1 score on the test dataset. This high level of accuracy underscores the effectiveness of the feature selection and the robustness of the DNN architecture. Users can rely on NeuronBit to provide accurate market direction predictions, giving them a strategic edge in their trading activities.</p>
+                </div>
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722003731/f1_fkaevc.png">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>CrewAI</h2>
+                    <p>Leveraged Crew AI in conjunction with the Google Gemini Pro LLM model to analyze the day trading market. This combination allows for deeper insights and more precise predictions.</p>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Development Stack</h2>
+                    <ul>
+                        <li><p>Investpy API: For retrieving market data.</p></li>
+                        <li><p>TensorFlow and Keras: For building and training the convolutional neural network.</p></li>
+                        <li><p>CrewAI: For analysing the market using agents, tasks and tools.</p></li>
+                        <li><p>Google Gemini: LLM for crewai.</p></li>
+                        <li><p>HTML, CSS, and JavaScript: For creating an interactive user interface.</p></li>
+                        <li><p>Flask: For serving the TensorFlow model to users via a web application.</p></li>
+                    </ul>
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722004180/nb_tyi6eh.gif">
+                </div>
+            </div>
+        </div>
+        <div class="scroll">
+            <a href="{% url 'projects' 4 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif id == 4 %}
+    <section id="4" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'projects' 3 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>                
+            </a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924194/a_8_qr6u3t.png">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>RAG App</h2>
+                    <p>I've developed a cutting-edge generative AI RAG web app, utilizing some of the most advanced LLM models and technologies available today. This platform offers various capabilities for interacting with PDFs, CSV files, and providing general information.</p>
+                    <div class="social-icons mt-3">
+                        
+                        <a href="https://github.com/kasun98/RAGgenAI" target="_blank" target="_blank" style="padding-right: 10px; text-decoration: none;" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.467-2.382 1.235-3.22-.135-.305-.54-1.527.105-3.18 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.875.12 3.18.765.838 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.293 0 .322.21.698.825.58C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg> Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Key Features</h2>
+                    <p>The web app leverages state-of-the-art models and tools to deliver exceptional performance and user experience.</p>
+                    <ul>
+                        <li><p>LLM Models Used: Ollama-Gemma 2b, Llama3 (8b & 70b), Gemini-pro, Gemma 7b, Mixtral.</p></li>
+                        <li><p>Technologies & Tools: Pandas AI, LangChain, LangSmith, Groq Inference Engine, Streamlit.</p></li>
+                    </ul>
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722006388/genai_jxqimi.png">
+                </div>
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6" style="align-content: center;">
+                    <iframe class="img-fluid" style="height: 300px; width: 600px;" src="https://www.youtube.com/embed/j1tfF35idZs?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Bots and Their Capabilities</h2>
+                    <p><strong>PDF Document Chat Bot-</strong><br>
+                        This bot allows users to chat with multiple PDF documents. By leveraging the Groq LPU Inference Engine, it delivers fast and accurate responses.<br>
+                        
+                        <strong>CSV Data Analysis Bot-</strong><br>
+                        Designed to analyze CSV data files, this bot uses Pandas AI and Smart DataFrame technologies, coupled with LLM models, to provide insightful data analysis and visualizations.<br>
+                        
+                        <strong>General Information Chat Bot-</strong><br>
+                        This bot is built using the Ollama-Gemma:2b model, which has been locally downloaded and fine-tuned to deliver accurate and reliable information.</p>
+                </div>
+                
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Development Stack</h2>
+                    <ul>
+                        <li><p>Ollama-Gemma:2b, Llama3 (8b & 70b), Gemini-pro, Gemma 7b, Mixtral LLM models</p></li>
+                        <li><p>Pandas AI for data processing and analysis</p></li>
+                        <li><p>Groq Inference Engine for fast response times</p></li>
+                        <li><p>LangChain, LangSmith LLMOps</p></li>
+                        <li><p>Streamlit for creating a seamless and interactive user experience</p></li>
+                        <li><p>Huggingface: For deployment of the end to end web application.</p></li>
+                    </ul>
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                   
+                </div>
+            </div>
+        </div>
+        <div class="scroll">
+            <a href="{% url 'projects' 5 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif id == 5 %}
+    <section id="5" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'projects' 4 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>                
+            </a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924193/a_4_yvlqca.png">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Emotion Analysis</h2>
+                    <p>Recognizing emotions in real-time has vast applications ranging from entertainment to mental health analysis. Utilizing the power of YOLOv8, Roboflow for dataset annotation, and Google Colab for model training, I developed a robust project to detect and display cumulative emotions from frames of any video or live webcam feed.</p>
+                    <div class="social-icons mt-3">
+                        
+                        <a href="https://github.com/kasun98/emotion" target="_blank" target="_blank" style="padding-right: 10px; text-decoration: none;" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.467-2.382 1.235-3.22-.135-.305-.54-1.527.105-3.18 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.875.12 3.18.765.838 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.293 0 .322.21.698.825.58C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg> Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>The Concept</h2>
+                    <p>The core idea is to leverage YOLOv8 for detecting emotions in real-time. By training a custom model on a carefully annotated dataset, the project aims to identify various emotions and display a cumulative pie chart of these emotions in live video feeds.</p>
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    
+                </div>
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722007552/trainresults_rfvjd3.png">
+                </div>                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Model Development</h2>
+                    <p>I used Roboflow to annotate a dataset of facial expressions, covering a wide range of emotions. The dataset was then used to train a YOLOv8 model on Google Colab. The training process involved fine-tuning the model over 100 epochs.</p>
+                </div>
+                
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Performance</h2>
+                    <p>The trained model was evaluated on a validation set, demonstrating performance in accurately detecting emotions. Below are some sample results from the model predictions.</p>
+                    <p>Real-time Video Processing: The model processes frames from a video feed and updates a pie chart representing the distribution of detected emotions.</p>
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722007619/pie_tnb9rd.gif">
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6" style="align-content: center;">
+                    <video class="img-fluid" controls autoplay loop muted>
+                        <source src="https://res.cloudinary.com/dlb65j6di/video/upload/v1722007065/yolo_mo2q5c.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Development Stack</h2>
+                    <ul>
+                        <li><p>Ultralytics YOLOV8: For training the emotion detection model.</p></li>
+                        <li><p>Ultralytics Analytics: For rendering the realtime results.</p></li>
+                        <li><p>Roboflow: For dataset annotation and management.</p></li>
+                        <li><p>Google Colab: For training the model on custom data.</p></li>
+                        <li><p>OpenCV and Matplotlib: For displaying real-time results and visualizations.</p></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div class="scroll">
+            <a href="{% url 'projects' 6 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif id == 6 %}
+    <section id="6" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'projects' 5 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>                
+            </a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924134/a_6_kh6yjl.png">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>ML Trading</h2>
+                    <p>In this project, I analyzed the prices of Deriv broker's synthetic trading indices, specifically focusing on Boom 500, Boom 1000, Crash 500, and Crash 1000 prices. The dataset consisted of 60 features extracted from 10 synthetic charts on MetaTrader 5. I experimented with different data transformations and machine learning models to predict these target prices.</p>
+                    <div class="social-icons mt-3">
+                        
+                        <a href="https://github.com/kasun98/synthetics" target="_blank" target="_blank" style="padding-right: 10px; text-decoration: none;" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.467-2.382 1.235-3.22-.135-.305-.54-1.527.105-3.18 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.875.12 3.18.765.838 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.293 0 .322.21.698.825.58C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg> Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Feature Engineering</h2>
+                    <p>I started by extracting the price data for 10 synthetic charts from MetaTrader 5, resulting in a dataframe with 60 features. These features were analyzed for their correlation with the target synthetic indices: Boom 500, Boom 1000, Crash 500, and Crash 1000 prices.</p>
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722008086/correlation_matrix_sbf0is.png">
+
+                </div>
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722008118/synths1_b500_w4zd2n.png">
+                </div>                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Machine Learning Experiments</h2>
+                    <p>To evaluate the performance of different models and data transformations, I conducted the following experiments:</p>
+                    <li style="color: rgb(136, 136, 136);">Raw Data: Used the original price data without any scaling.</li>
+                    <li style="color: rgb(136, 136, 136);">Log Transformation: Applied natural logarithm to the price data.</li>
+                    <li style="color: rgb(136, 136, 136);">Sine Transformation: Converted the price data to sine values.</li>
+                    <li style="color: rgb(136, 136, 136);">Standard Scaling: Applied standard scaling to the price data.</li><br>
+                    <p>For each experiment, I used XGBoost and k-Nearest Neighbors (KNN) models to predict the 'Is current market price good for a trade' (Binary classification). The performance was measured using accuracy and ROC-AUC scores.</p>
+                </div>
+                
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Observations</h2>
+                    <ul>
+                        <li style="color: rgb(136, 136, 136);">For Boom500 index analysis, both XGBoost and KNN algoriths performed well with log price data</li>
+                        <li style="color: rgb(136, 136, 136);">For Boom1000 index analysis, XGBoost and KNN algoriths performed well with Standard scaled data and log price data respectively</li>
+                        <li style="color: rgb(136, 136, 136);">For Crash500 index analysis, XGBoost and KNN algoriths performed well with Raw data and log price data respectively</li>
+                        <li style="color: rgb(136, 136, 136);">For Crash1000 index analysis, XGBoost and KNN algoriths performed well with Standard scaled data and log price data respectively</li>
+                    </ul>
+                    <br>
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722008139/b500_gfkjzg.png">
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722008154/b1000_zuan42.png">
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722008169/c500_lc44bj.png">
+                </div>
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722008178/c1000_lugasy.png">
+                </div>                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Results and Insights</h2>
+                    <p>The comparison charts above summarizes the performance of XGBoost and KNN models across different data transformations. Here are some key insights:</p>
+                    <ul>   
+                        <li style="color: rgb(136, 136, 136);">Raw Data: XGBoost and KNN models performed reasonably well with raw data.</li>
+                        <li style="color: rgb(136, 136, 136);">Log Transformation: Applying natural logarithm improved the performance of KNN significantly.</li>
+                        <li style="color: rgb(136, 136, 136);">Sine Transformation: Sine transformation resulted in lower performance compared to other transformations.</li>
+                        <li style="color: rgb(136, 136, 136);">Standard Scaling: Standard scaling provided a balanced performance for both models.</li><br>
+                    </ul>
+                    </div>   
+            </div>
+        </div>
+        <div class="scroll">
+            <a href="{% url 'projects' 7 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif id == 7 %}
+    <section id="7" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'projects' 6 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>                
+            </a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924046/a_11_era6jt.png">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Summarize Tube</h2>
+                    <p>Video content has become a cornerstone of online communication, with YouTube leading the charge as one of the most popular platforms for sharing videos of all kinds. However, digesting the vast amount of information contained within these videos can be time-consuming and challenging. SummarizeTube, a groundbreaking project I developed, aims to simplify this process by providing users with concise summaries of YouTube video transcripts.</p>
+                    <div class="social-icons mt-3">
+                        
+                        <a href="https://github.com/kasun98/summarizetube" target="_blank" target="_blank" style="padding-right: 10px; text-decoration: none;" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.467-2.382 1.235-3.22-.135-.305-.54-1.527.105-3.18 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.875.12 3.18.765.838 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.293 0 .322.21.698.825.58C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg> Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>The Vision</h2>
+                    <p>SummarizeTube is built on the idea of harnessing the power of AI to streamline the consumption of video content. By leveraging the YouTube transcript API and the cutting-edge capabilities of the Google Gemini Pro model, SummarizeTube automates the process of generating accurate and informative summaries. Users simply input a YouTube video link, and SummarizeTube handles the rest, delivering a condensed version of the video's content in seconds.</p>
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722009791/st_sdp6cv.gif">
+
+                </div>
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722010063/st2_nco688.png">
+                </div>                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li style="color: rgb(136, 136, 136);">Seamless Integration: SummarizeTube seamlessly integrates with Streamlit, a popular web application framework, providing users with a user-friendly interface for summarizing YouTube videos.</li>
+                        <li style="color: rgb(136, 136, 136);">AI-Powered Summarization: The heart of SummarizeTube lies in its utilization of the Google Gemini Pro model, which employs state-of-the-art natural language processing techniques to distill video transcripts into succinct summaries.</li>
+                        <li style="color: rgb(136, 136, 136);">Wordcloud Visualization: In addition to summaries, SummarizeTube generates wordcloud visualizations of video transcripts, offering users a visually engaging representation of the most frequently used words in the video.</li>
+                        <li style="color: rgb(136, 136, 136);">Chat Bot Assistance: SummarizeTube goes beyond mere summarization by incorporating a chat bot powered by the Google Gemini Pro model. Users can ask questions and receive relevant answers, enhancing their overall experience on the platform.</li>
+                    </ul>
+                    </div>
+                
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Technology Stack</h2>
+                    <ul>
+                        <li style="color: rgb(136, 136, 136);">Streamlit: For building the user interface and handling user inputs.</li>
+                        <li style="color: rgb(136, 136, 136);">YouTube Transcript API: For fetching the transcript of YouTube videos.</li>
+                        <li style="color: rgb(136, 136, 136);">Google Gemini Pro Model: For generating accurate summaries and powering the chat bot.</li>
+                        <li style="color: rgb(136, 136, 136);">WordCloud: For creating wordcloud visualizations of video transcripts.</li>
+                        <li style="color: rgb(136, 136, 136);">Huggingface: For deployment of the end to end web application.</li>
+                    </ul>
+                    <br>
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="scroll">
+            <a href="{% url 'projects' 8 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif id == 8 %}
+    <section id="8" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'projects' 7 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>                
+            </a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924072/a_3_jsr2jn.png">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Face Detection</h2>
+                    <p>Face detection is a critical technology in various applications ranging from security systems to personal devices. Utilizing the power of deep learning, I developed a robust face detection model using VGG16, TensorFlow, OpenCV, and several other tools to achieve high accuracy and real-time performance.</p>
+                    <div class="social-icons mt-3">
+                        
+                        <a href="https://github.com/kasun98/facedetection" target="_blank" target="_blank" style="padding-right: 10px; text-decoration: none;" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.467-2.382 1.235-3.22-.135-.305-.54-1.527.105-3.18 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.875.12 3.18.765.838 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.293 0 .322.21.698.825.58C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg> Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2></h2>
+                    <p>The face detection model leverages the VGG16 network, which is well-known for its excellent performance in image recognition tasks. By fine-tuning this pre-trained network, I adapted it to detect faces in real-time. The model not only identifies the presence of faces but also provides precise bounding boxes around detected faces, making it suitable for various practical applications.</p>
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Data Collection and Annotation</h2>
+                    <p>Data collection is a crucial part of developing a face detection model. Using OpenCV, I captured images from a webcam and stored them in a structured format. To annotate these images, I employed LabelMe, a powerful tool that allows for precise labeling of facial features and bounding boxes. This annotated dataset served as the foundation for training the model.</p>
+                </div>
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Data Augmentation</h2>
+                    <p>To enhance the model's robustness, I used Albumentations, a popular library for data augmentation. This step involved applying random transformations such as cropping, flipping, and adjusting brightness and contrast to create a diverse set of training images. This process ensures that the model can generalize well to various lighting conditions and orientations.</p>
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Model Training</h2>
+                    <p>The model was trained using a combination of classification and regression losses to accurately identify faces and predict their bounding boxes. The Adam optimizer with a carefully tuned learning rate ensured efficient convergence. The training process involved monitoring various metrics to achieve optimal performance.</p>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Technology Stack</h2>
+                    <ul>
+                        <li style="color: rgb(136, 136, 136);">OpenCV: For image capture and processing.</li>
+                        <li style="color: rgb(136, 136, 136);">LabelMe: For annotating the dataset.</li>
+                        <li style="color: rgb(136, 136, 136);">Albumentations: For data augmentation.</li>
+                        <li style="color: rgb(136, 136, 136);">TensorFlow and Keras: For building and training the VGG16-based custom model.</li>
+                        <li style="color: rgb(136, 136, 136);">Matplotlib: For visualizing data and model predictions.</li>
+                    </ul>
+                    <br>
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    
+                </div>
+            </div>
+
+        </div>
+        <div class="scroll">
+            <a href="{% url 'projects' 9 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif id == 9 %}
+    <section id="9" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'projects' 8 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>                
+            </a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924096/a_5_shoh74.png">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Tokyo Olympic Data</h2>
+                    <p>The Tokyo Olympic Data Analysis project showcases the power of modern data analytics by leveraging Azure services and Tableau Public to derive actionable insights from the Tokyo Olympic dataset. This blog post details the steps and tools used in the project, from data acquisition to visualization, highlighting key findings and methodologies.</p>
+                    <div class="social-icons mt-3">
+                        
+                        <a href="https://github.com/kasun98/Olympic-data" target="_blank" target="_blank" style="padding-right: 10px; text-decoration: none;" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.467-2.382 1.235-3.22-.135-.305-.54-1.527.105-3.18 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.875.12 3.18.765.838 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.293 0 .322.21.698.825.58C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg> Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Workflow</h2>
+                    <ul>
+                        <li style="color: rgb(136, 136, 136);">Data Acquisition:
+                            The journey began with acquiring the Tokyo Olympic dataset from Kaggle, a rich source of information about athletes, events, and outcomes.</li>
+                        <li style="color: rgb(136, 136, 136);">Data Integration:
+                            To seamlessly integrate data from various sources, I utilized Azure Data Factory. This service enabled hybrid data integration, ensuring that data from different sources could be combined effectively.</li>
+                        <li style="color: rgb(136, 136, 136);">Data Storage:
+                            The raw dataset was stored in Azure Data Lake Gen2, providing a scalable and secure storage solution ideal for large datasets.</li>
+                        
+                    </ul>                
+                </div>
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722010892/olympic2_mu61md.png">
+                </div>
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2></h2>
+                    <p>Data Analysis:
+                        Exploratory data analysis was conducted to uncover initial insights and prepare the data for further processing. This included:</p>
+                    <ul>
+                        <li style="color: rgb(136, 136, 136);">Checking for missing values to ensure data completeness.</li>
+                        <li style="color: rgb(136, 136, 136);">Adjusting data types of columns to facilitate accurate analysis.</li>                        
+                    </ul> 
+                    <p>Azure Databricks played a crucial role in performing these data analysis tasks, offering a collaborative environment for data scientists and engineers.</p>               
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2></h2>
+                    <ul>
+                        <li style="color: rgb(136, 136, 136);">Data Transformation:
+                            Based on the analysis findings, the dataset was transformed to enhance its suitability for in-depth analysis. These transformations were then stored back into Azure Data Lake Gen2, maintaining a streamlined data pipeline.</li>
+                        <li style="color: rgb(136, 136, 136);">Data Synthesis:
+                            For in-depth data synthesis and extracting valuable insights, Azure Synapse Analytics was employed. This powerful analytics service enabled sophisticated data processing and querying capabilities.</li>
+                        <li style="color: rgb(136, 136, 136);">Visualization:
+                                To communicate the insights effectively, a comprehensive dashboard was developed using Tableau Public. This dashboard offers a visual summary of the key findings and insights derived from the data analysis.</li>                        
+                        <li><a href="https://public.tableau.com/views/Book1_17120794704690/Dashboard1?:language=en-US&:sid=59A8DA4A48164144A5D86E4A4B7E8451-0:0&:display_count=n&:origin=viz_share_link">View dashboard</a>               </li>
+                    </ul> 
+                </div>               
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Technology Stack</h2>
+                    <ul>
+                        <li style="color: rgb(136, 136, 136);">Azure Data Factory</li>
+                        <li style="color: rgb(136, 136, 136);">Azure Data Lake Gen2</li>
+                        <li style="color: rgb(136, 136, 136);">Azure Databricks</li>
+                        <li style="color: rgb(136, 136, 136);">Azure Synapse Analytics</li>
+                        <li style="color: rgb(136, 136, 136);">Tableau Public</li>
+                    </ul>
+                    <br>
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722011620/olympic3_o4kaf8.png">
+                </div>
+            </div>
+
+        </div>
+        <div class="scroll">
+            <a href="{% url 'projects' 10 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif id == 10 %}
+    <section id="10" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'projects' 9 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>                
+            </a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924134/a_6_kh6yjl.png">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Falcon 9</h2>
+                    <p>Reusing the first stage of Falcon 9 rockets significantly reduces the cost of space missions. While SpaceX advertises a launch cost of $62 million, other providers charge upwards of $165 million. The ability to predict successful landings of Falcon 9's first stage can provide invaluable insights for alternative companies competing against SpaceX. This project aims to develop a predictive model for the successful landing of Falcon 9's first stage, leveraging various data science methodologies and machine learning techniques.</p>
+                    <div class="social-icons mt-3">
+                        
+                        <a href="https://github.com/kasun98/applied_datascience_capstone" target="_blank" target="_blank" style="padding-right: 10px; text-decoration: none;" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.467-2.382 1.235-3.22-.135-.305-.54-1.527.105-3.18 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.875.12 3.18.765.838 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.293 0 .322.21.698.825.58C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg> Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>The Concept</h2>
+                    <p>The project centers around building a robust machine learning model that predicts whether the first stage of Falcon 9 will land successfully. This model helps in estimating the potential cost savings of a launch, thereby aiding competitors in bidding processes.</p>
+                                  
+                </div>
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722011774/ibm_bz7liv.png">
+                </div>
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2></h2>
+                    <ul>
+                        <li style="color: rgb(136, 136, 136);">Data Collection and Preparation:
+                            Data was gathered using a SpaceX REST API and web scraping techniques to compile detailed records of Falcon 9 launches. The data was then converted into a Pandas DataFrame and underwent extensive wrangling to clean and prepare it for analysis.</li>
+                        <li style="color: rgb(136, 136, 136);">Exploratory Data Analysis:
+                            Initial analysis involved creating scatter plots and bar charts to uncover patterns and insights. SQL queries were also executed to further manipulate and sort the data. This step was crucial in understanding the underlying factors that influence successful landings.</li>                        
+                    </ul> 
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2></h2>
+                    <ul>
+                        <li style="color: rgb(136, 136, 136);">interactive Visualization:
+                            An interactive dashboard was developed using Plotly Dash, featuring pie charts and scatter plots to provide dynamic data analysis capabilities. Additionally, Folium was used to create an interactive map that visualized launch site proximities and calculated distances.</li>
+                        <li style="color: rgb(136, 136, 136);">Machine Learning Model Development:
+                            The core of the project involved training various classification models, including Support Vector Machines (SVM), Classification Trees, and Logistic Regression. Data was split into training and testing sets, and a hyperparameter grid search was conducted to optimize the models. The best-performing model was selected based on its performance on the test data.</li>
+                        
+                        <li><a href="https://drive.google.com/file/d/1vrfLekAhRBDadGu5LyhRFc7-LyUkTtFD/view?usp=sharing">View Final Presentation</a></li>
+                    </ul> 
+                </div>               
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Technology Stack</h2>
+                    <ul>
+                        <li style="color: rgb(136, 136, 136);">Pandas and SQL: For data manipulation and querying.</li>
+                        <li style="color: rgb(136, 136, 136);">Plotly Dash: For creating interactive dashboards.</li>
+                        <li style="color: rgb(136, 136, 136);">Folium: For generating interactive maps.</li>
+                        <li style="color: rgb(136, 136, 136);">Scikit-Learn: For machine learning model development and evaluation.</li>
+                    </ul>
+                    <br>
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1722012325/ibm2_k4qr14.png">
+                </div>
+            </div>
+
+        </div>
+        <div class="scroll">
+            <a href="{% url 'projects' 11 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif id == 11 %}
+    <section id="11" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'projects' 10 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>                
+            </a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924029/a_10_fzogrt.png">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Auction</h2>
+                    <p>This project is an E-commerce auction website developed as part of a CS50 web development course. The application allows users to create auction listings, place bids, add items to a watchlist, and leave comments on listings. It showcases my skills in Django, JavaScript, HTML, and CSS, and demonstrates my ability to build dynamic web applications with user authentication and database interactions.</p>
+                    <div class="social-icons mt-3">
+                        
+                        <a href="https://github.com/kasun98/cs50w_auction" target="_blank" target="_blank" style="padding-right: 10px; text-decoration: none;" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.467-2.382 1.235-3.22-.135-.305-.54-1.527.105-3.18 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.875.12 3.18.765.838 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.293 0 .322.21.698.825.58C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg> Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Features</h2>
+                    <ul>
+                        <li><p>Create Listing: Users can create new auction listings with a title, description, starting bid, optional image URL, and category. This allows sellers to easily list items for auction.</p></li>
+                        <li><p>Active Listings Page: The homepage displays all currently active auction listings with the title, description, current price, and image (if available). This gives buyers a comprehensive view of available items.</p></li>
+                        <li><p>Listing Page: Each listing has a dedicated page showing detailed information. Signed-in users can add the item to their watchlist, place bids, and add comments. Sellers can close the auction, declaring the highest bidder as the winner.</p></li>
+                        <li><p>Watchlist: Signed-in users can maintain a watchlist of items they are interested in. The watchlist page displays all added items, providing quick access to their respective listing pages.</p></li>
+                    </ul>
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2></h2>
+                    <ul>
+                        <li><p>Bidding System: Users can place bids on items. The system ensures that bids are valid by checking against the starting bid and any existing higher bids. This ensures fair and competitive bidding.</p></li>
+                        <li><p>Comments: Users can leave comments on listing pages, enabling interaction and feedback between buyers and sellers.</p></li>
+                        <li><p>Categories: The site features a categories page where users can browse listings by category. Clicking on a category displays all active listings within that category, helping users find items of interest quickly.</p></li>
+                        <li><p>Django Admin Interface: Site administrators have full control over listings, comments, and bids via the Django admin interface. This includes viewing, adding, editing, and deleting records, providing robust site management capabilities.</p></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6" style="align-content: center;">
+                    <iframe class="img-fluid" style="height: 300px; width: 600px;" src="https://www.youtube.com/embed/UilU4hFT274?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Technologies</h2>
+                    <ul>
+                        <li><p>Backend: Django for handling user authentication, database operations, and serving dynamic content.</p></li>
+                        <li><p>Frontend: JavaScript for interactivity, HTML for structure, and CSS for styling. Bootstrap for responsive and modern UI design.</p></li>
+                        <li><p>Database: SQLite for development</p></li>
+                        <li><p>Fetch API for asynchronous data fetching and updates.</p></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div class="scroll">
+            <a href="{% url 'projects' 12 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif id == 12 %}
+    <section id="12" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'projects' 11 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>                
+            </a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924184/a_2_xszh83.png">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Forex Wallet</h2>
+                    <p>The Personal Wallet Management WebApp is a robust tool for managing personal wallets across multiple currencies, supporting USD, EUR, GBP, JPY, CHF, AUD, CAD, NZD, and PLN. Users can securely register or log in to access their financial data. The dashboard offers live forex rates, order history, and a holdings pie chart, with links to detailed pages for an in-depth view.</p>
+                    <div class="social-icons mt-3">
+                        
+                        <a href="https://github.com/kasun98/cs50w_final" target="_blank" target="_blank" style="padding-right: 10px; text-decoration: none;" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.467-2.382 1.235-3.22-.135-.305-.54-1.527.105-3.18 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.875.12 3.18.765.838 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.293 0 .322.21.698.825.58C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg> Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Features</h2>
+                    <ul>
+                        <li><p>User Authentication: Secure registration and login to manage personal financial data.</p></li>
+                        <li><p>Live Forex Data: Real-time forex market rates using TraderMade WebSocket.</p></li>
+                        <li><p>Order History: Comprehensive list of past orders, ordered by time.</p></li>
+                        <li><p>Holdings Pie Chart: Visual representation of asset distribution.</p></li>
+                    </ul>
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2></h2>
+                    <ul>
+                        <li><p>Detailed Financial Analytics: Includes balance gain percentage, holdings distribution, and transaction volumes.</p></li>
+                        <li><p>Interactive Visualizations: Real-time data displayed through ApexCharts.</p></li>
+                        <li><p>Multiple Currency Support: Real-time updates and conversions for multiple currencies.</p></li>
+                        <li><p>Comprehensive UI: User-friendly interface with detailed pages for deeper insights.</p></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6" style="align-content: center;">
+                    <iframe class="img-fluid" style="height: 300px; width: 600px;" src="https://www.youtube.com/embed/ZgENvMXg_Zg?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Technologies</h2>
+                    <ul>
+                        <li><p>Frontend: HTML, CSS, JavaScript, Bootstrap</p></li>
+                        <li><p>Backend: Django, Python</p></li>
+                        <li><p>Data Handling: TraderMade WebSocket, ExchangeRate-API, SQLite</p></li>
+                        <li><p>Visualization: ApexCharts, Tradingview Widgets</p></li>
+                        <li><p>Hosting: Cloudinary for media storage</p></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div class="scroll">
+            <a href="{% url 'projects' 13 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif id == 13 %}
+    <section id="13" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'projects' 12 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>                
+            </a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924026/a_12_z70o6i.png">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>E-mail</h2>
+                    <p>This project is an email client developed as part of the CS50 Web Development course. It demonstrates my ability to create interactive web applications using JavaScript, HTML, and CSS. The application allows users to manage their emails, including sending, receiving, archiving, and replying to emails.</p>
+                    <div class="social-icons mt-3">
+                        
+                        <a href="https://github.com/kasun98/cs50w_mail" target="_blank" target="_blank" style="padding-right: 10px; text-decoration: none;" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.467-2.382 1.235-3.22-.135-.305-.54-1.527.105-3.18 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.875.12 3.18.765.838 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.293 0 .322.21.698.825.58C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg> Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Features</h2>
+                    <ul>
+                        <li><p>Send Mail: Users can compose and send emails directly from the application. Upon submission, the email is sent and the user’s Sent mailbox is loaded.</p></li>
+                        <li><p>Mailbox Management: The application supports viewing different mailboxes (Inbox, Sent, Archive) by making GET requests to fetch the relevant emails.</p></li>
+                        <li><p>View Email: Clicking on an email displays its full content, including sender, recipients, subject, timestamp, and body. Emails are marked as read once viewed.</p></li>
+                    </ul>
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2></h2>
+                    <ul>
+                        <li><p>Archive and Unarchive: Users can archive emails from their Inbox and unarchive emails from their Archive. This feature helps in organizing the emails efficiently.</p></li>
+                        <li><p>Reply: Users can reply to emails. The reply composition form is pre-filled with the recipient, subject, and original email body to facilitate easy and quick responses.</p></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6" style="align-content: center;">
+                    <iframe class="img-fluid" style="height: 300px; width: 600px;" src="https://www.youtube.com/embed/qstzkdF2XS8?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Technologies</h2>
+                    <ul>
+                        <li><p>Frontend: JavaScript for dynamic content and asynchronous operations, HTML for structure, and CSS for styling.</p></li>
+                        <li><p>API Requests: Utilized Fetch API for making asynchronous GET and POST requests to interact with the backend.</p></li>
+                        <li><p>Database: SQLite for development</p></li>
+                        <li><p>User Interface: Developed a single-page application interface with a focus on user experience and responsiveness.</p></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div class="scroll">
+            <a href="{% url 'projects' 14 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif id == 14 %}
+    <section id="14" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'projects' 13 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>                
+            </a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924045/a_14_v9szdu.png">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Social Network</h2>
+                    <p>Welcome to my Social Network project developed as part of the CS50 Web Development course. This web application allows users to interact with each other by making posts, following other users, and liking posts. The project showcases my skills in web development using Python, Django, JavaScript, HTML, and CSS. It includes various features typical of a social networking platform and ensures a smooth and interactive user experience.</p>
+                    <div class="social-icons mt-3">
+                        
+                        <a href="https://github.com/kasun98/cs50w_social" target="_blank" target="_blank" style="padding-right: 10px; text-decoration: none;" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.467-2.382 1.235-3.22-.135-.305-.54-1.527.105-3.18 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.875.12 3.18.765.838 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.293 0 .322.21.698.825.58C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg> Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Features</h2>
+                    <ul>
+                        <li><p>New Post: Signed-in users can create new text-based posts easily. Users can write their thoughts in a text area and submit the post with a click of a button.</p></li>
+                        <li><p>All Posts: A dedicated page that displays all posts from all users in reverse chronological order. Each post includes the username of the poster, the post content, the date and time of posting, and the number of likes.</p></li>
+                        <li><p>Profile Page: Each user has a profile page that displays their posts in reverse chronological order, the number of followers they have, and the number of people they follow. Users can follow or unfollow others directly from the profile page.</p></li>
+                    </ul>
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2></h2>
+                    <ul>
+                        <li><p>Following: A personalized feed that shows posts only from users that the current user follows, similar to the "All Posts" page but with a more limited set of posts. This feature is only accessible to signed-in users.</p></li>
+                        <li><p>Pagination: Posts are displayed 10 per page, with "Next" and "Previous" buttons to navigate through older or newer posts.</p></li>
+                        <li><p>Edit Post: Users can edit their own posts through an "Edit" button. The post content is replaced with a textarea for editing, and changes can be saved asynchronously without reloading the page</p></li>
+                        <li><p>Like and Unlike: Users can toggle likes on posts with a button. The like count updates asynchronously to ensure a seamless experience.</p></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6" style="align-content: center;">
+                    <iframe class="img-fluid" style="height: 300px; width: 600px;" src="https://www.youtube.com/embed/Y0KCeqjO_wg?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Technologies</h2>
+                    <ul>
+                        <li><p>Backend: Python and Django for the core logic, user authentication, and handling database operations.</p></li>
+                        <li><p>Frontend: HTML, CSS for structure and styling, and JavaScript for interactivity and asynchronous operations.</p></li>
+                        <li><p>Database: SQLite for development</p></li>
+                        <li><p>Bootstrap for responsive design.</p></li>
+                        <li><p>JavaScript Fetch API for asynchronous operations.</p></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div class="scroll">
+            <a href="{% url 'projects' 15 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif id == 15 %}
+    <section id="15" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'projects' 14 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>                
+            </a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924131/a_16_vtzce1.png">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Wiki</h2>
+                    <p>This project is a Wiki Encyclopedia developed as part of CS50 web development course. The application allows users to create, edit, and search for encyclopedia entries written in Markdown. It demonstrates my skills in Django, Python, JavaScript, HTML, and CSS, and showcases my ability to build interactive and user-friendly web applications.</p>
+                    <div class="social-icons mt-3">
+                        
+                        <a href="https://github.com/kasun98" target="_blank" target="_blank" style="padding-right: 10px; text-decoration: none;" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.467-2.382 1.235-3.22-.135-.305-.54-1.527.105-3.18 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.875.12 3.18.765.838 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.293 0 .322.21.698.825.58C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg> Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Features</h2>
+                    <ul>
+                        <li><p>Entry Page: Users can visit specific encyclopedia entries by navigating to /wiki/TITLE, where TITLE is the name of the entry. The page displays the content of the entry</p></li>
+                        <li><p>Index Page: The main index page lists all encyclopedia entries with clickable links, allowing users to navigate directly to any entry.</p></li>
+                        <li><p>Search: Users can search for encyclopedia entries using a search box in the sidebar. Exact matches redirect to the entry page, while partial matches display a list of relevant entries. </p></li>
+                        <li><p>New Page: Users can create new encyclopedia entries by clicking "Create New Page" in the sidebar. They can enter a title and Markdown content, and save the new page.</p></li>
+                    </ul>
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2></h2>
+                    <ul>
+                        <li><p>Edit Page: Each entry page has an "Edit" link, allowing users to edit the entry's Markdown content. The existing content is pre-populated in a textarea, and users can save their changes. </p></li>
+                        <li><p>Random Page: A "Random Page" link in the sidebar takes users to a random encyclopedia entry, providing a way to explore different entries.</p></li>
+                        <li><p>Markdown to HTML Conversion: The content of each entry is written in Markdown and converted to HTML for display using the python-markdown2 package, ensuring a consistent and readable format.</p></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6" style="align-content: center;">
+                    <iframe class="img-fluid" style="height: 300px; width: 600px;" src="https://www.youtube.com/embed/gEsYj6jB7g8?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Technologies</h2>
+                    <ul>
+                        <li><p>Backend: Django for handling user requests, managing content, and serving dynamic pages.</p></li>
+                        <li><p>Frontend: JavaScript for interactive elements, HTML for structure, and CSS for styling.</p></li>
+                        <li><p>Database: SQLite for development</p></li>
+                        <li><p>markdown2 for converting Markdown content to HTML.</p></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div class="scroll">
+            <a href="{% url 'projects' 16 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif id == 16 %}
+    <section id="16" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'projects' 15 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>                
+            </a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924144/a_9_br5n3a.png">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Google Clone</h2>
+                    <p>This project is a clone of Google's search functionalities, developed as part of the CS50 Web Development course. It includes pages for regular Google Search, Google Image Search, and Google Advanced Search. This project demonstrates my ability to create interactive and user-friendly web interfaces with HTML, CSS, and JavaScript.</p>
+                    <div class="social-icons mt-3">
+                        
+                        <a href="https://github.com/kasun98" target="_blank" target="_blank" style="padding-right: 10px; text-decoration: none;" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.467-2.382 1.235-3.22-.135-.305-.54-1.527.105-3.18 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.875.12 3.18.765.838 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.293 0 .322.21.698.825.58C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg> Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Features</h2>
+                    <ul>
+                        <li><p>Three Pages: The website includes three main pages:
+                            Google Search (index.html): A search page mimicking Google's search functionality.
+                            Google Image Search: A page for performing image searches.
+                            Google Advanced Search: A page for advanced search options.</p></li>
+                        <li><p>Navigation Links: Each page has links in the upper-right corner for easy navigation between the Google Search, Image Search, and Advanced Search pages.</p></li>
+                        <li><p>Google Search: Users can type a query and click the "Google Search" button to be taken to Google's search results page.</p></li>
+                        <li><p>Image Search: Similar to the main search page, users can perform image searches by typing a query and clicking the search button, which redirects to Google's image search results.</p></li>
+                    </ul>
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2></h2>
+                    <ul>
+                        <li><p>Advanced Search: The Advanced Search page provides four input fields for more specific search options:
+                            All these words,
+                            This exact word or phrase,
+                            Any of these words,
+                            None of these words.</p></li>
+                        <li><p>I'm Feeling Lucky: The main Google Search page includes an "I'm Feeling Lucky" button that takes users directly to the first Google search result for their query, bypassing the normal results page.</p></li>
+                        <li><p>Aesthetic Consistency: The CSS styling closely resembles Google's design, ensuring a familiar and intuitive user experience.</p></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6" style="align-content: center;">
+                    <iframe class="img-fluid" style="height: 300px; width: 600px;" src="https://www.youtube.com/embed/zXPbkw33AyQ?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Technologies</h2>
+                    <ul>
+                        <li><p>Frontend: HTML for structure, CSS for styling, and JavaScript for interactivity.</p></li>
+                        <li><p>Fetch API for handling search queries.</p></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div class="scroll">
+            <a href="{% url 'index' %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% endif %}
+
+    
+
+    
+
+    <a href="#" class="scrollup" id="scroll-top">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+
+    <footer class="footer text-center text-white bg-dark">
+        <div class="container">
+            <p>&copy; 2024 Kasun Dewaka. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

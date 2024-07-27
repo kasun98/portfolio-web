@@ -1,0 +1,371 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{cat}}</title>
+    <link rel="icon" href="https://res.cloudinary.com/dlb65j6di/image/upload/v1722077419/presentation-svgrepo-com_vphgux.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
+    <script src="{% static 'portfolio/scripts.js' %}"></script>
+
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'portfolio/logo.png' %}" alt="Your Logo" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+   
+    {% if cat == "DataScience" %}
+    <section id="ds" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'categories' 'GenerativeAI' %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>                
+            </a>
+        </div>
+        <div class="container">
+            <h2>Data Science</h2><br>
+            
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <a style="text-decoration: none;" href="{% url 'projects' 9 %}">
+                        <div class="card h-100">
+                            <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924134/a_6_kh6yjl.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Tokyo Olympic</h5>
+                            <p class="card-text">Comprehensive analysis of the Tokyo Olympic dataset using Azure services and Tableau Public.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a style="text-decoration: none;" href="{% url 'projects' 10 %}">
+                        <div class="card h-100">
+                            <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924096/a_5_shoh74.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Falcon9 Landing</h5>
+                            <p class="card-text">IBM Data Science capstone - predictive model for the successful landing of SpaceX Falcon 9's first stage.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a style="text-decoration: none;" href="{% url 'projects' 6 %}">
+                        <div class="card h-100">
+                            <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924137/a_7_sybb8z.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Deriv Synthetics</h5>
+                                <p class="card-text">Analysis of Deriv Broker's Synthetic Trading Indices Using Machine Learning Models</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+              </div>
+        </div>
+        <div class="scroll">
+            <a href="{% url 'categories' 'DeepLearning' %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif cat == "DeepLearning" %}
+    <section id="ds" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'categories' 'DataScience' %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>                
+            </a>
+        </div>
+        <div class="container">
+            <h2>Deep Learning</h2><br>
+            
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <a style="text-decoration: none;" href="{% url 'projects' 2 %}">
+                        <div class="card h-100">
+                            <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924053/a_15_ygjmwj.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Traffic Management</h5>
+                            <p class="card-text">Vehicle traffic flow management system using YOLOv8n for object detection and tracking, and GUI to display the vehicle counts, vehicle flow, and average speeds.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a style="text-decoration: none;" href="{% url 'projects' 3 %}">
+                        <div class="card h-100">
+                            <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924137/a_7_sybb8z.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Neuronbit</h5>
+                            <p class="card-text">Predictive model deviating from traditional methods to forecast Bitcoin Market direction. CrewAI (Updated)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a style="text-decoration: none;" href="{% url 'projects' 5 %}">
+                        <div class="card h-100">
+                            <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924193/a_4_yvlqca.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Emotion Analysis</h5>
+                                <p class="card-text">Real-time Emotion Analysis using YoloV8 model and Ultralytics Analytics</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a style="text-decoration: none;" href="{% url 'projects' 8 %}">
+                        <div class="card h-100">
+                            <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924072/a_3_jsr2jn.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Face Detection</h5>
+                                <p class="card-text">Face Detection with TensorFlow Transfer Learning and OpenCV</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+              </div>
+        </div>
+        <div class="scroll">
+            <a href="{% url 'categories' 'WebDevelopment' %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif cat == "WebDevelopment" %}
+    <section id="ds" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'categories' 'DeepLearning' %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>                
+            </a>
+        </div>
+        <div class="container">
+            <h2 >Web Development</h2><br>
+            
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <a style="text-decoration: none;" href="{% url 'projects' 1 %}">
+                        <div class="card h-100">
+                            <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924074/a_13_lot0td.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Groupz</h5>
+                            <p class="card-text">Chat web app where users can register, log in, chat with friends, create and manage groups, and interact with AI models in group chats.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a style="text-decoration: none;" href="{% url 'projects' 3 %}">
+                        <div class="card h-100">
+                            <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924137/a_7_sybb8z.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Neuronbit</h5>
+                            <p class="card-text">Flask web app to forecast Bitcoin Market direction using a deep learning model.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a style="text-decoration: none;" href="{% url 'projects' 11 %}">
+                        <div class="card h-100">
+                            <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924029/a_10_fzogrt.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Auction Website</h5>
+                                <p class="card-text">E-commerce auction website application allows users to create auction listings, place bids, add items to a watchlist, and leave comments on listings.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a style="text-decoration: none;" href="{% url 'projects' 12 %}">
+                        <div class="card h-100">
+                            <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924184/a_2_xszh83.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Forex Wallet</h5>
+                                <p class="card-text">Real-time updating forex wallet manager web app, supports 8 currencies</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a style="text-decoration: none;" href="{% url 'projects' 13 %}">
+                        <div class="card h-100">
+                            <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924026/a_12_z70o6i.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">E-mail</h5>
+                                <p class="card-text">This project is an email client developed as part of the CS50 Web Development course.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a style="text-decoration: none;" href="{% url 'projects' 14 %}">
+                        <div class="card h-100">
+                            <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924045/a_14_v9szdu.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Social Media</h5>
+                                <p class="card-text">Developed as part of the CS50 Web Development course. This web application allows users to interact with each other.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a style="text-decoration: none;" href="{% url 'index'%}">
+                        <div class="card h-100">
+                            <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924048/a_1_ohicjy.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Portfolio</h5>
+                                <p class="card-text">This portfolio website showcases my projects, skills, and experiences in AI, Data Science, Machine Learning, and Web Development.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a style="text-decoration: none;" href="{% url 'projects' 15 %}">
+                        <div class="card h-100">
+                            <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924131/a_16_vtzce1.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Encyclopedia</h5>
+                                <p class="card-text">This project is a Wiki Encyclopedia developed as part of CS50 web development course.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a style="text-decoration: none;" href="{% url 'projects' 16 %}">
+                        <div class="card h-100">
+                            <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924144/a_9_br5n3a.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Google Clone</h5>
+                                <p class="card-text">This project is a clone of Google's search functionalities, developed as part of the CS50 Web Development course.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+              </div>
+        </div>
+        <div class="scroll">
+            <a href="{% url 'categories' 'GenerativeAI' %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif cat == "GenerativeAI" %}
+    <section id="ds" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'categories' 'WebDevelopment' %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>                
+            </a>
+        </div>
+        <div class="container">
+            <h2>Generative AI</h2><br>
+            
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <a style="text-decoration: none;" href="{% url 'projects' 1 %}">
+                        <div class="card h-100">
+                            <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924074/a_13_lot0td.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Groupz</h5>
+                            <p class="card-text">Chat web app where users can register, log in, chat with friends, create and manage groups, and interact with AI models in group chats.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a style="text-decoration: none;" href="{% url 'projects' 4 %}">
+                        <div class="card h-100">
+                            <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924194/a_8_qr6u3t.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">GenAI Rag App</h5>
+                            <p class="card-text">Advanced Approach to Research and Data Interaction using different Large Language Models and inference engines</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a style="text-decoration: none;" href="{% url 'projects' 7 %}">
+                        <div class="card h-100">
+                            <img src="https://res.cloudinary.com/dlb65j6di/image/upload/v1721924046/a_11_era6jt.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Summarize Tube</h5>
+                                <p class="card-text">Revolutionizing Video Transcript Summarization using Google Gemini Pro.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+              </div>
+        </div>
+        <div class="scroll">
+            <a href="{% url 'categories' 'DataScience' %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+
+    {% endif %}
+
+    
+
+    
+
+    <a href="#" class="scrollup" id="scroll-top">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+
+    <footer class="footer text-center text-white bg-dark">
+        <div class="container">
+            <p>&copy; 2024 Kasun Dewaka. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
