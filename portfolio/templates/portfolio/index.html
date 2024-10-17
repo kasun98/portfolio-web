@@ -37,30 +37,38 @@
         }
 
         
+        /* HTML: <div class="loader"></div> */
         .loader {
-        display: inline-grid;
-        width: 80px;
+        width: 40px;
         aspect-ratio: 1;
+        --c: linear-gradient(#ffffff 0 0);
+        --r1: radial-gradient(farthest-side at bottom,#ffffff 93%,#ac0fb179);
+        --r2: radial-gradient(farthest-side at top   ,#ffffff 93%,#ac0fb179);
+        background: 
+            var(--c) ,var(--r1),var(--r2),
+            var(--c) ,var(--r1),var(--r2),
+            var(--c) ,var(--r1),var(--r2);
+        background-repeat: no-repeat;
+        animation: l2 1s infinite alternate;
         }
-        .loader:before,
-        .loader:after {
-        content:"";
-        grid-area: 1/1;
-        border-radius: 50%;
+        @keyframes l2 {
+        0%,25% {
+            background-size: 8px 0,8px 4px,8px 4px,8px 0,8px 4px,8px 4px,8px 0,8px 4px,8px 4px;
+            background-position: 0 50%,0 calc(50% - 2px),0 calc(50% + 2px),50% 50%,50% calc(50% - 2px),50% calc(50% + 2px),100% 50%,100% calc(50% - 2px),100% calc(50% + 2px);
         }
-        .loader:before {
-        margin: 25%;
-        background: repeating-conic-gradient(#C02942 0 60deg,#0B486B 0 120deg);
-        transform: rotate(0turn) translate(50%) rotate(0turn);
-        animation: l2 2s alternate infinite ease-in-out;
+        50% {
+            background-size: 8px 100%,8px 4px,8px 4px,8px 0,8px 4px,8px 4px,8px 0,8px 4px,8px 4px;
+            background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px),50% 50%,50% calc(50% - 2px),50% calc(50% + 2px),100% 50%,100% calc(50% - 2px),100% calc(50% + 2px);
         }
-        .loader:after {
-        padding: 10%;
-        margin: -10%;
-        background: repeating-conic-gradient(from -15deg,#C02942 0 30deg,#0B486B 0 60deg);
-        mask:conic-gradient(from 75deg,#000 210deg,#0000 0) content-box exclude,conic-gradient(from 75deg,#000 210deg,#0000 0);
+        75% {
+            background-size: 8px 100%,8px 4px,8px 4px,8px 100%,8px 4px,8px 4px,8px 0,8px 4px,8px 4px;
+            background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px),50% 50%,50% calc(0% - 2px),50% calc(100% + 2px),100% 50%,100% calc(50% - 2px),100% calc(50% + 2px);
         }
-        @keyframes l2 {to{transform: rotate(.5turn) translate(50%) rotate(-1turn)}}
+        95%,100% {
+            background-size: 8px 100%,8px 4px, 8px 4px,8px 100%,8px 4px,8px 4px,8px 100%,8px 4px,8px 4px;
+            background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px),50% 50%,50% calc(0% - 2px),50% calc(100% + 2px),100% 50%,100% calc(0% - 2px),100% calc(100% + 2px);
+        }
+        }
                 
 
         
@@ -70,7 +78,7 @@
 <body>
     <div id="loading-screen">
         <div class="loader"></div>
-        <div class="loading-text">Please wait...</div>
+        <div class="loading-text"></div>
     </div>
     <div id="main-content" style="display: none;">
     <header class="header">
