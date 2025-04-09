@@ -36,11 +36,95 @@
         </nav>
     </header>
     
-   
-    {% if id == 1 %}
-    <section id="1" class="about-section py-5">
+    {% if id == 0 %}
+    <section id="0" class="about-section py-5">
         <div class="scroll">
             <a href="{% url 'index' %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>               
+            </a>
+        </div>
+        <div class="container">
+            <div class="row" >
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1744182675/air-quality_bgb7ri.png">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Real-Time AQI Prediction Data System</h2>
+                    <p>An end-to-end real-time data and ML pipeline for predicting Air Quality Index (AQI) using the WAQI API. This project uses Apache Kafka, Spark Structured Streaming, PostgreSQL, Airflow, MLflow, and Flask, all containerized using Docker Compose.</p>
+                    <div class="social-icons mt-3">
+                        
+                        <a href="https://github.com/kasun98/datasystem" target="_blank" target="_blank" style="padding-right: 10px; text-decoration: none;" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.467-2.382 1.235-3.22-.135-.305-.54-1.527.105-3.18 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.875.12 3.18.765.838 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.293 0 .322.21.698.825.58C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg> Github 
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>The Concept</h2>
+                    <p>This project aims to predict Air Quality Index (AQI) in near real-time by leveraging streaming data from the WAQI API. It integrates modern big data tools to collect, process, and analyze environmental data continuously. The system is designed to support proactive air quality monitoring, enabling timely alerts and insights for public health and urban planning. Machine learning models are trained on historical and streaming data to make accurate AQI predictions, which are then served via an API</p>
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    <a href="https://res.cloudinary.com/dlb65j6di/image/upload/v1744180632/architecture_diagram_2_elsy0a.jpg" target="_blank">
+                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1744180632/architecture_diagram_2_elsy0a.jpg">
+                    </a>
+                </div>
+                
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6" style="align-content: center;">
+                    <a href="https://res.cloudinary.com/dlb65j6di/image/upload/v1744187758/docker_resources_ul8ip3.png" target="_blank">
+                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1744187758/docker_resources_ul8ip3.png">
+                    </a>
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Architecture</h2>
+                    <p>The architecture follows a modular, end-to-end pipeline. A Python script fetches AQI data from the WAQI API every 5 minutes and pushes it to a Kafka topic. Spark Structured Streaming consumes the data, performs transformations and feature engineering, and makes predictions using a pre-trained ML model. The pipeline stores raw data, features, and predictions into PostgreSQL tables, while Flask serves the model and Airflow automates retraining.</p>
+                </div>   
+            </div>
+
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Tech Stack</h2>
+                    <ul>
+                        <li><p>Data Ingestion: WAQI API (every 5 min), Kafka Producer</p></li>
+                        <li><p>Streaming & Processing: Apache Kafka + Spark Structured Streaming</p></li>
+                        <li><p>Data Storage: PostgreSQL (Raw Data, Feature Store, Predictions)</p></li>
+                        <li><p>Orchestration: Apache Airflow</p></li>
+                        <li><p>ML Experiment Tracking: MLflow</p></li>
+                        <li><p>Model Serving: Flask API (Predict, Retrain, Reload, Test)</p></li>
+                        <li><p>Containerization: Docker Compose</p></li>
+                        <li><p>Broker System: Confluent Kafka (Broker, Zookeeper, Schema Registry, Control Center)</p></li>
+                    </ul>
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    <a href="https://res.cloudinary.com/dlb65j6di/image/upload/v1744187757/spark_jobs_hrza7w.png" target="_blank">
+                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1744187757/spark_jobs_hrza7w.png">
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="scroll">
+            <a href="{% url 'projects' 1 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif id == 1 %}
+    <section id="1" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'projects' 0 %}" style="padding-right: 10px; text-decoration: none;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
                     <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
                 </svg>                
