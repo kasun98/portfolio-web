@@ -36,10 +36,140 @@
         </nav>
     </header>
     
-    {% if id == 0 %}
-    <section id="0" class="about-section py-5">
+    {% if id == 17 %}
+    <section id="17" class="about-section py-5">
         <div class="scroll">
             <a href="{% url 'index' %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>               
+            </a>
+        </div>
+        <div class="container">
+            <div class="row" >
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1745679558/krakenbtc_baa5in.png">
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Real-Time Crypto Data System</h2>
+                    <p>
+                        This is a fully open-source, end-to-end real-time data pipeline project built around BTC/USD live trade data streamed via Kraken WebSocket. It covers everything from data ingestion, processing, and feature engineering, to real-time ML predictions, observability, and scheduled retraining, all in a production-grade architecture.
+                    </p>
+                    <div class="social-icons mt-3">
+                        
+                        <a href="https://github.com/kasun98/trades" target="_blank" target="_blank" style="padding-right: 10px; text-decoration: none;" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.93 0-1.31.467-2.382 1.235-3.22-.135-.305-.54-1.527.105-3.18 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.875.12 3.18.765.838 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.293 0 .322.21.698.825.58C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg> Github 
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>The Concept</h2>
+                    <p>
+                        The goal of this project was to design and implement a fully open-source, real-time data and machine learning pipeline capable of ingesting, processing, and analyzing live cryptocurrency trading data, specifically BTC/USD trades, and generating predictive insights such as volatility forecasts and future bid prices. <br>
+
+                        Inspired by high-frequency trading systems used in financial markets, this project simulates a production-grade streaming analytics system that integrates data engineering, real-time feature engineering, machine learning, and MLOps to deliver end-to-end intelligence, from raw trade data ingestion to live dashboards and predictions.<br>
+
+                        The DB architecture follows a modern medallion data lakehouse model (Bronze, Silver, Gold layers), optimized for both streaming and batch workloads. The system emphasizes low-latency inference, scalability, and modularity, making it a strong blueprint for building real-time data products in finance and beyond.
+                    </p>
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    <a href="https://res.cloudinary.com/dlb65j6di/image/upload/v1745680718/Trades_Arch_Diagram_daclvb.png" target="_blank">
+                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1745680718/Trades_Arch_Diagram_daclvb.png">
+                    </a>
+                </div>
+                
+                
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6" style="align-content: center;">
+                    <a href="https://res.cloudinary.com/dlb65j6di/image/upload/v1745681510/airflow_webserver_ui_ymc6wl.png" target="_blank">
+                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1745681510/airflow_webserver_ui_ymc6wl.png">
+                    </a>
+                </div>
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Architecture</h2>
+                    <p>
+                        <p>
+                            <strong>Data Ingestion Layer:</strong><br>
+                            Live BTC/USD trade data is streamed from the Kraken WebSocket API and sent to Confluent Kafka using a Python Kafka producer.
+                          </p>
+                        
+                          <p>
+                            <strong>Stream Processing & Feature Engineering:</strong><br>
+                            A Kafka consumer extracts the stream, performs real-time feature engineering (e.g., moving averages, volatility), and writes both raw and processed data to QuestDB via the ILP (Influx Line Protocol).
+                          </p>
+                        
+                          <p>
+                            <strong>Data Lakehouse (QuestDB + MinIO):</strong><br>
+                            Implements a Medallion Architecture using QuestDB for high-performance time-series storage:
+                            <ul>
+                              <li><strong>Bronze Layer:</strong> Raw trade data</li>
+                              <li><strong>Silver Layer:</strong> Engineered feature data</li>
+                              <li><strong>Gold Layer:</strong> ML predictions & materialized views (1-min, 5-min partitions)</li>
+                            </ul>
+                            All QuestDB tables are set with a TTL of 2 days, and daily backups are automatically pushed to MinIO as a data lake via Airflow.
+                          </p>
+                        
+                          <p>
+                            <strong>Machine Learning & Serving:</strong><br>
+                            Engineered features are cached in Redis (with TTL + pub/sub), and XGBoost models forecast 5-minute volatility and bid price. A Flask API (served via <code>waitress</code>) provides prediction, retrain, and reload endpoints.
+                          </p>
+                        
+                          <p>
+                            <strong>Monitoring, MLOps & Visualization:</strong><br>
+                            MLflow (with MinIO & PostgreSQL) tracks experiments and model versions. Airflow schedules model retraining and data lake backups. Grafana dashboards visualize live trade metrics, predictions, and pipeline latency end-to-end.
+                          </p>
+                          
+                    </p>
+                </div>   
+            </div>
+
+            <div class="row" style="margin-top: 50px;">
+                
+                <div id="intro2-1" class="col-md-6">
+                    <h2>Tech Stack</h2>
+                    <ul>
+                        <li><p>Data Ingestion: Kraken WebSocket API (BTC/USD live trades)</p></li>
+                        <li><p>Streaming: Apache Kafka (Confluent Platform)</p></li>
+                        <li><p>Real-Time Processing: Kafka Consumer for feature engineering</p></li>
+                        <li><p>Data Storage: QuestDB (Time-Series DB) with Medallion architecture</p></li>
+                        <li><p>Data Lake: MinIO for object storage and backups</p></li>
+                        <li><p>Feature Store: Redis (real-time feature caching with TTL + pub/sub)</p></li>
+                        <li><p>Machine Learning: XGBoost models for bid price and volatility prediction</p></li>
+                        <li><p>Model Serving: Flask API served via Waitress (predict, retrain, reload)</p></li>
+                        <li><p>Experiment Tracking: MLflow with PostgreSQL and MinIO backend</p></li>
+                        <li><p>Monitoring: Grafana dashboards for live metrics and ML insights</p></li>
+                        <li><p>Orchestration: Apache Airflow (daily retraining, data backups)</p></li>
+                        <li><p>Containerization: Docker Compose for all services</p></li>
+                    </ul>
+
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    <a href="https://res.cloudinary.com/dlb65j6di/image/upload/v1745681623/grafana_dashboard_h0rivj.png" target="_blank">
+                        <img class="img-fluid" src="https://res.cloudinary.com/dlb65j6di/image/upload/v1745681623/grafana_dashboard_h0rivj.png">
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="scroll">
+            <a href="{% url 'projects' 0 %}" style="padding-right: 10px; text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    {% elif id == 0 %}
+    <section id="0" class="about-section py-5">
+        <div class="scroll">
+            <a href="{% url 'projects' 17 %}" style="padding-right: 10px; text-decoration: none;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180)">
                     <path d="M12 21c-.265 0-.52-.105-.707-.293l-9-9c-.39-.391-.39-1.023 0-1.414s1.024-.39 1.414 0L12 18.586l8.293-8.293c.39-.391 1.024-.391 1.414 0s.39 1.023 0 1.414l-9 9c-.187.188-.442.293-.707.293z"/>
                 </svg>               
@@ -1452,7 +1582,7 @@
 
     <footer class="footer text-center text-white bg-dark">
         <div class="container">
-            <p>&copy; 2024 Kasun Dewaka. All rights reserved.</p>
+            <p>&copy; 2025 | Kasun Dewaka. All rights reserved.</p>
         </div>
     </footer>
     
